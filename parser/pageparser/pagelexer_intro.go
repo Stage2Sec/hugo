@@ -45,7 +45,10 @@ LOOP:
 					l.emit(TypeIgnore)
 					continue LOOP
 				} else {
-					return l.errorf("plain HTML documents not supported")
+					// Everything seems to work fine with this commented out.
+					// Before, Hugo would choke on html file with a comment at the beginning of the file, but be fine with an html file without a comment.
+					// 
+					// return l.errorf("plain HTML documents not supported")
 				}
 			}
 			break LOOP
